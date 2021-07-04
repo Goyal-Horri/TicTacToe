@@ -15,7 +15,7 @@ const cells=document.querySelectorAll(".cell");
 startGame();
 
 function startGame(){
-    document.querySelector(".endgame").getElementsByClassName.display="none";
+    document.querySelector(".endgame").style.display="none";
     for(let i=0;i<9;i++){
         origBoard[i]=i;
     }
