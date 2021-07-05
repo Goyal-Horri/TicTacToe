@@ -35,7 +35,8 @@ function turnClick(square){
     if(typeof origBoard[square.target.id]=='number'){      
         turn(square.target.id, huPlayer);
         if(!checkTie()){
-            setTimeout(() => {  playAudio();turn(bestSpot(), aiPlayer); }, 300);
+            bs=bestSpot()
+            turn(bs, aiPlayer);
         }
     }
 }
@@ -82,7 +83,7 @@ function declareWinner(who){
 }
 
 function emptySquares(){
-    console.log(origBoard.filter(s=>typeof(s)=='number'));
+    // console.log(origBoard.filter(s=>typeof(s)=='number'));
     return origBoard.filter(s=>typeof(s)=='number');
 }
 
